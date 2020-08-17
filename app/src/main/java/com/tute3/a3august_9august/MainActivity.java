@@ -2,6 +2,7 @@ package com.tute3.a3august_9august;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -30,7 +31,12 @@ public class MainActivity extends AppCompatActivity {
         toast.setView(layout);//setting the view of custom toast layout
         toast.show();
 
-
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplication(), FirstActivity.class));
+            }
+        });
 
     }
 }
